@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Market - Premium Online Shopping</title>
+    <meta name="description"
+        content="Discover curated products at Nexus Market - Your premium online shopping destination">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/cart.js" defer></script>
+</head>
+
+<body>
+    <%- include('partials/header', { cartCount: cartCount }) %>
+
+        <main class="main" role="main">
+            <div class="container">
+                <% if (successMessage) { %>
+                    <div class="success-message">
+                        ✅ <%= successMessage %>
+                    </div>
+                    <% } %>
+
+                        <section class="catalog" aria-labelledby="catalog-heading">
+                            <header class="catalog-header">
+                                <h2 id="catalog-heading">Curated Collection</h2>
+                                <p class="catalog-description">Discover premium products at Nexus Market</p>
+                            </header>
+
+                            <div class="products-grid" role="list" aria-label="Product listings">
+                                <% products.forEach((product, index)=> { %>
+                                    <article class="product-card" role="listitem">
+                                        <% if (index < 3) { %>
+                                            <div class="product-badge">New</div>
+                                            <% } %>
+                                                <figure class="product-image-container">
+                                                    <img src="<%= product.imageUrl %>" alt="<%= product.name %>"
+                                                        class="product-image">
+                                                    <figcaption class="visually-hidden">
+                                                        <%= product.name %>
+                                                    </figcaption>
+                                                </figure>
+                                                <div class="product-info">
+                                                    <header class="product-header">
+                                                        <h3 class="product-name">
+                                                            <%= product.name %>
+                                                        </h3>
+                                                    </header>
+                                                    <p class="product-blurb">
+                                                        <%= product.blurb %>
+                                                    </p>
+                                                    <div class="product-pricing">
+                                                        <p class="product-price">$<%= product.price.toFixed(2) %>
+                                                        </p>
+                                                    </div>
+                                                    <footer class="product-actions">
+                                                        <form action="/cart/add" method="POST" class="add-to-cart-form">
+                                                            <input type="hidden" name="sku" value="<%= product.sku %>">
+                                                            <input type="hidden" name="qty" value="1">
+                                                            <button type="submit" class="btn btn-primary"
+                                                                aria-label="Add <%= product.name %> to cart">
+                                                                Add to Cart
+                                                            </button>
+                                                        </form>
+                                                    </footer>
+                                                </div>
+                                    </article>
+                                    <% }); %>
+                            </div>
+                        </section>
+            </div>
+        </main>
+
+        <%- include('partials/footer') %>
+</body>
+
+</html>

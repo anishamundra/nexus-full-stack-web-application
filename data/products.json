@@ -1,0 +1,65 @@
+[
+    {
+        "sku": "SKU1001",
+        "name": "Aurora Ceramic Mug",
+        "price": 14.99,
+        "imageUrl": "/images/mug.jpg",
+        "blurb": "Stoneware, 350ml capacity"
+    },
+    {
+        "sku": "SKU1002",
+        "name": "Nebula Cotton Tee",
+        "price": 24.00,
+        "imageUrl": "/images/tee.jpg",
+        "blurb": "100% premium cotton"
+    },
+    {
+        "sku": "SKU1003",
+        "name": "Cosmic Hardcover Notebook",
+        "price": 12.50,
+        "imageUrl": "/images/notebook.jpg",
+        "blurb": "120 pages, dotted grid"
+    },
+    {
+        "sku": "SKU1004",
+        "name": "Stellar Gel Pen",
+        "price": 8.99,
+        "imageUrl": "/images/pen.jpg",
+        "blurb": "Metal body, smooth writing"
+    },
+    {
+        "sku": "SKU1005",
+        "name": "Galaxy Travel Backpack",
+        "price": 45.00,
+        "imageUrl": "/images/backpack.jpg",
+        "blurb": "Waterproof, 20L capacity"
+    },
+    {
+        "sku": "SKU1006",
+        "name": "Orbit Insulated Bottle",
+        "price": 18.75,
+        "imageUrl": "/images/bottle.jpg",
+        "blurb": "Keeps drinks hot/cold for hours"
+    },
+    {
+        "sku": "SKU1007",
+        "name": "Nova LED Keychain",
+        "price": 6.99,
+        "imageUrl": "/images/keychain.jpg",
+        "blurb": "Bright LED, durable build"
+    },
+    {
+        "sku": "SKU1008",
+        "name": "Comet Vinyl Stickers",
+        "price": 4.50,
+        "imageUrl": "/images/stickers.jpg",
+        "blurb": "Set of 8 unique designs"
+    },
+    {
+        "sku": "SKU1009",
+        "name": "Solar Power Bank",
+        "price": 32.99,
+        "imageUrl": "/images/powerbank.jpg",
+        "blurb": "10000mAh with solar charging"
+    }
+]

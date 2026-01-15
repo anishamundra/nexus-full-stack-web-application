@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nine Cards Commerce</title>
+    <meta name="description" content="Professional eCommerce site with 9 unique products">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <h1>Nine Cards Commerce</h1>
+            <nav role="navigation" aria-label="Main navigation">
+                <a href="/">Home</a>
+                <a href="/cart">Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main" role="main">
+        <div class="container">
+            <% if (typeof body !=='undefined' ) { %>
+                <%- body %>
+                    <% } else { %>
+                        <h1>Error: No content to display</h1>
+                        <% } %>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Nine Cards Commerce. MADS4012 Project.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
